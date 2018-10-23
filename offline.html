@@ -6,14 +6,24 @@
     <title>PWA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="/content/pwa.js"></script>
-    <script src="/content/connection.js"></script>
     <link rel="stylesheet" href="/content/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <h1>Offline</h1>
+        <div>
+            <img id="onlineStatus" />
+        </div>
+    </header>
+    
     <nav>
-        <a href="/">Home</a> | <a href="/dog.html">Dog</a> | <a href="/paris.html">Paris</a>
+        <a href="/">Home</a> | <a href="/page-2.html">Page Two</a> | <a href="/page-3.html">Page Three</a>
     </nav>
-    <h1>OFFLINE</h1>
-    <img src="/content/offline.jpg" />
+
+    <article class="offline">
+        <img src="/content/offline.jpg" />
+    </article>
+    <script src="/content/connection.js"></script>
 </body>
 </html>

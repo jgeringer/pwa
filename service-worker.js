@@ -1,5 +1,5 @@
-var CACHE_STATIC_NAME = 'static-v9';
-var CACHE_DYNAMIC_NAME = 'dynamic-v9';
+var CACHE_STATIC_NAME = 'static-v3';
+var CACHE_DYNAMIC_NAME = 'dynamic-v3';
 
 self.addEventListener('install', function (event) {
   console.log('Installing Service Worker ...', event);
@@ -11,7 +11,9 @@ self.addEventListener('install', function (event) {
             '/content/offline.jpg',
             '/content/connection.js',
             '/offline.html',
-            '/content/style.css'
+            '/content/style.css',
+            '/content/happy-cloud.png',
+            '/content/sad-cloud.png'
         ]);
       })
   )

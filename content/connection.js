@@ -1,8 +1,14 @@
 console.log('online? ', navigator.onLine)
 
-window.addEventListener('online', () => backOnline())
+if (navigator.onLine){
+  userOnline()
+} else {
+  userOffline()
+}
 
-window.addEventListener('offline', () => console.log('you went offline'))
+window.addEventListener('online', () => userOnline(true))
+
+window.addEventListener('offline', () => userOffline())
 
 //checking strength of connection (not good browser support)
 if ('connection' in navigator){
@@ -12,7 +18,18 @@ if ('connection' in navigator){
   })
 }
 
-function backOnline() {
+
+function userOnline(wasOffline) {
+  let cloudImage = document.getElementById('onlineStatus')
   console.log('you are back online')
-  location.reload();
+  cloudImage.src = '/content/happy-cloud.png'
+  if (wasOffline === true){
+    location.reload();
+  }
+}
+
+function userOffline(){
+  let cloudImage = document.getElementById('onlineStatus')
+  cloudImage.src = '/content/sad-cloud.png'
+  console.log('you went offline')
 }
