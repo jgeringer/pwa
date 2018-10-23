@@ -1,6 +1,6 @@
 console.log('online? ', navigator.onLine)
 
-window.addEventListener('online', () => console.warn('you are back online'))
+window.addEventListener('online', () => backOnline())
 
 window.addEventListener('offline', () => console.log('you went offline'))
 
@@ -10,4 +10,9 @@ if ('connection' in navigator){
   navigator.connection.addEventListener('change', (e) => {
   	console.log('strength: ', e.target.effectiveType)
   })
+}
+
+function backOnline() {
+  console.log('you are back online')
+  location.reload();
 }
