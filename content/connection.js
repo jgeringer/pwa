@@ -21,7 +21,7 @@ if ('connection' in navigator){
 
 function userOnline(wasOffline) {
   let cloudImage = document.getElementById('onlineStatus')
-  console.log('you are back online')
+  console.log('you are online')
   cloudImage.src = '/content/happy-cloud.png'
   if (wasOffline === true){
     location.reload();
@@ -31,7 +31,7 @@ function userOnline(wasOffline) {
 function userOffline(){
   let cloudImage = document.getElementById('onlineStatus')
   cloudImage.src = '/content/sad-cloud.png'
-  console.log('you went offline')
+  console.log('you are offline')
 }
 
 
