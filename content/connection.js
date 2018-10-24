@@ -33,3 +33,5 @@ function userOffline(){
   cloudImage.src = '/content/sad-cloud.png'
   console.log('you went offline')
 }
+
+

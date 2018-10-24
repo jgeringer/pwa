@@ -34,3 +34,14 @@ article span{
     text-align: center;
     margin-top: 2rem;
 }
+
+.flex-col{
+    flex-direction: column;
+}
+.flex-col img{
+    width: 100%;
+    max-width: 800px;
+}
+.flex-col span{
+    margin-left: 0;
+}
